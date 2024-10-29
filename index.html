@@ -15,6 +15,7 @@
         <div class="page__half page__half--front">
           <!--span.code.set(FOLD,{transformOrigin:"50% 100%",scaleY:0}),set(CLIPS,{transformOrigin:"50% 0"}),set(".cannon__shirt",{opacity:0}),set(".cannon",{y:28}),set(".text--ordered .char",{y:"100%"});const SPEED=.15,FOLD_TL=()=>new timeline().to(LEFT_ARM,{duration:SPEED,rotateY:-180,transformOrigin:`${100*(22/65.3)}% 50%`},0).to(RIGHT_ARM,{duration:SPEED,rotateY:-180,transformOrigin:`${100*((65.3-22)/65.3)}% 50%`},SPEED).to(FOLD,{duration:SPEED/4,scaleY:1},2*SPEED).to(FOLD,{duration:SPEED,y:-47},2*SPEED+.01).to(CLIPS,{duration:SPEED,scaleY:.2},2*SPEED).to(".cannon",{duration:SPEED,y:0},2*SPEED),LOAD_TL=()=>new timeline().to(".button__shirt",{transformOrigin:"50% 13%",rotate:90,duration:.15}).to(".button__shirt",{duration:.15,y:60}).to(".t-shirt__cannon",{y:5,repeat:1,yoyo:!0,duration:.1}).to(".t-shirt__cannon",{y:50,duration:.5,delay:.1}),FIRE_TL=()=>new timeline().set(".t-shirt__cannon",{rotate:48,x:-85,scale:2.5}).set(".cannon__shirt",{opacity:1}).to(".t-shirt__cannon-content",{duration:1,y:-35}).to(".t-shirt__cannon-content",{duration:.25,y:-37.5}).to(".t-shirt__cannon-content",{duration:.015,y:-30.5}).to(".cannon__shirt",{onStart:()=>CLIP.play(),duration:.5,y:"-25vmax"},"<").to(".text--ordered .char",{duration:.15,stagger:.1,y:"0%"}).to("button",{duration:.15*7,"--hue":116,"--lightness":55},"<"),ORDER_TL=new timeline({paused:!0});ORDER_TL.set(".cannon__shirt",{opacity:0}),ORDER_TL.set("button",{"--hue":260,"--lightness":20}),ORDER_TL.to("button",{scale:300/BUTTON.offsetWidth,duration:SPEED}),ORDER_TL.to(".text--order .char",{stagger:.1,y:"100%",duration:.1}),ORDER_TL.to(SHIRT,{x:BUTTON.offsetWidth/2-33,duration:.2}),ORDER_TL.add(FOLD_TL()),ORDER_TL.add(LOAD_TL()),ORDER_TL.add(FIRE_TL()),BUTTON.addEventListener("click",()=>{1===ORDER_TL.progress()?(document.documentElement.style.setProperty("--hue",360*Math.random()),ORDER_TL.time(0),ORDER_TL.pause()):0===ORDER_TL.progress()&&ORDER_TL.play()});
           -->
+          <h1 class="page__half__title">Historias a la carta</h1>
         </div>
         <div class="page__half page__half--back">
           <div class="book__insert">
@@ -70,7 +71,6 @@
                 </div>
               </div>              
             </div>
-            <button class="container__btn container__btn--indice">Buscar</button>
           </div>
           <!-- lol -->
           <div class="page__number">1</div>
@@ -99,7 +99,6 @@
               <p>Una mañana, con el aroma del café recién hecho llenando la cocina, Doña Betty decidió experimentar con el bien mesabe. Lo peló cuidadosamente, retirando la parte negra y la membrana que envolvía la fruta. Pero no estaba interesada en un plato dulce; en su mente, se le ocurrió fusionar el bien mesabe con los ingredientes básicos de cualquier cocina campesina: huevo, cebolla larga y tomate.</p>
             </div>
           </div>
-          <div class="page__number">1</div>
           <div class="page__number">2</div>
         </div>
       </div>
@@ -111,6 +110,9 @@
               <p>En el fogón de su hogar, la fruta dorada se cocinaba lentamente mientras ella preparaba un hogao. Luego, rompió un huevo fresco y lo incorporó a la mezcla, removiendo con suavidad hasta obtener una textura suave y fragante. El resultado fue una receta única: el "bien mesabe con huevo", un plato que reflejaba su ingenio y su amor por los ingredientes de la tierra.</p>
             </div>
             <div class="container__audio"> 
+              <div class="container__audio__text">
+                <h2>Escucha la receta que tenemos para ti</h2>
+              </div>
               <button class="audio-button" id="audioButton">
                 <svg class="audio-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -120,11 +122,11 @@
               <audio id="myAudio" src="./assets/audio/audio2.mp3"></audio>
             </div>
             <div class="container__pasos">
-              <button id="openPopup" class="open-popup-btn" onclick="lol()">Abrir Popup</button>
+              <button class="open-popup-btn" data-popup="popup1" onclick="lol()">Abrir Receta</button>
 
-              <div id="popupOverlay" class="popup-overlay">
+              <div id="popup1" class="popup-overlay">
                   <div class="popup-content">
-                      <button id="closePopup" class="close-popup-btn">&times;</button>
+                      <button class="close-popup-btn">&times;</button>
                       <div class="container__paso">
                         <div class="container__paso__descripcion container__paso__descripcion--odd">
                           <img src="./assets/PASO A PASO/Paso1.jpg" alt="lol">
@@ -133,7 +135,7 @@
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
                           </div>
                         </div>
-                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO/Paso2.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 2</h2>
@@ -147,11 +149,45 @@
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
                           </div>
                         </div>
-                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO/Paso4.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 4</h2>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO/Paso5.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 5</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="./assets/PASO A PASO/Paso6.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 6</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO/Paso7.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 7</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="./assets/PASO A PASO/Paso8.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 8</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO/Paso8.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 8</h2>
                           </div>
                         </div>
                       </div>
@@ -163,27 +199,244 @@
         </div>
         <div class="page__half page__half--back">
           <div class="container"> 
-            <div class="slider-container">
-              <div class="slider">
-                <div class="slide"><img src="./assets/PASO A PASO/Paso1.jpg" alt="Imagen 1"></div>
-                <div class="slide"><img src="./assets/PASO A PASO/Paso2.jpg" alt="Imagen 2"></div>
-                <div class="slide"><img src="/placeholder.svg?height=400&amp;width=600" alt="Imagen 3"></div>
-                <div class="slide"><img src="/placeholder.svg?height=400&amp;width=600" alt="Imagen 4"></div>
-              </div>
-              <button class="prev-button" aria-label="Imagen anterior">&#8249;</button>
-              <button class="next-button" aria-label="Siguiente imagen">&#8250;</button>
-              <div class="dots"><span class="dot" data-index="0"></span><span class="dot" data-index="1"></span><span class="dot" data-index="2"></span><span class="dot" data-index="3"> </span></div>
+            <div class="container__title container__title--recipe">
+              <h1>FRIJOLES CON MICO</h1>
+            </div>
+            <div class="container__img container__img--1"> <img src="./assets/img/FRIJOLES.svg" alt="" srcset=""></div>
+            <div class="container__ingredients"> 
+              <h3>Ingredientes </h3>
+              <ul> 
+                <li class="hover-item line-1" data-info="El huevo es un alimento básico en la dieta colombiana y juega un papel importante tanto en la gastronomía como en la economía del país. Aquí hay algunos aspectos relevantes sobre el huevo en Colombia">Huevo fresco</li>
+                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Bienmesabe</li>
+                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Cebolla larga</li>
+                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Tomate</li>
+                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Perejil</li>
+                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Ajo</li>
+                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Pimiento</li>
+                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Canela</li>
+              </ul>
+            </div>
+            <div class="container__paragraph container__paragraph--1"> 
+              <p>En las mañanas frías de Santa Fe, donde Rosangela se levantaba antes del amanecer para comenzar a preparar su famoso plato. Los frijoles, remojados desde la noche anterior, eran el corazón de la receta, pero el secreto estaba en el “Mico”, una masa de maíz mezclada con ajos machacados, cebolla picada finamente, comino y una generosa cucharada de manteca de cerdo. </p>
+              <p>Un día, mientras preparaba su plato para un festival local, Rosangela decidió compartir la historia de cómo este plato se convirtió en un símbolo de resistencia y unidad en su familia. Durante tiempos difíciles, cuando los ingredientes eran escasos, su abuela había creado la receta como una forma de asegurar que cada miembro de la familia recibiera una comida nutritiva y reconfortante. Lo que comenzó como una necesidad se transformó en una celebración de la creatividad y la supervivencia ya que aquellos ingredientes proceden de la cosecha a la que se podía acceder en aquellos tiempos. </p>
             </div>
           </div>
-          <div class="page__number">3</div>
           <div class="page__number">4</div>
         </div>
       </div>
       <div class="page book__page" style="--page-index: 4;">
         <div class="page__half page__half--front">
           <div class="container">
+            <div class="container__img container__img--2"><img src="./assets/img/FRIJOLES CON MICO.jpg" alt="" srcset=""></div>
+            <div class="container__paragraph container__paragraph--2">
+              <p>Con cada bola de masa que Rosangela formaba y mezclaba con los frijoles, relataba cómo el plato no solo había alimentado a su familia, sino que también había unido a la comunidad, enseñándoles la importancia de compartir y cuidar a los demás. </p>
+              <p>Años más tarde, los "Frijoles con Mico" se convirtió en una leyenda en el pueblo, una que hablaba de la generosidad y el ingenio de Rosangela, y de cómo a través del uso de alimentos, que ya a la actualidad se modernizaron como lo es el plátano, lo cual en su momento se usaba el banano verde a diferencia de este. </p>
+            </div>
+            <div class="container__audio"> 
+              <div class="container__audio__text">
+                <h2>Escucha la receta que tenemos para ti</h2>
+              </div>
+              <button class="audio-button" id="audioButton">
+                <svg class="audio-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+              </button>
+              <audio id="myAudio" src="./assets/audio/FRIJOLES MICO.mp3"></audio>
+            </div>
+            <div class="container__pasos">
+              <button class="open-popup-btn" data-popup="popup2" onclick="lol()">Abrir Receta</button>
+
+              <div id="popup2" class="popup-overlay">
+                  <div class="popup-content">
+                      <button class="close-popup-btn">&times;</button>
+                      <div class="container__paso">
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO FM/Paso1.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 1</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="./assets/PASO A PASO FM/Paso2.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 2</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO FM/Paso3.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 3</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="./assets/PASO A PASO FM/Paso4.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 4</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO FM/Paso5.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 5</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="./assets/PASO A PASO FM/Paso6.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 6</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO FM/Paso7.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 7</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="./assets/PASO A PASO FM/Paso8.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 8</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO FM/Paso9.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 9</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="./assets/PASO A PASO FM/Paso9.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 9</h2>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
           </div>
           <div class="page__number">5</div>
+        </div>
+        <div class="page__half page__half--back">
+          <div class="container"> 
+            <div class="container__title container__title--recipe">
+              <h1>COLADA DE PIÑUELA</h1>
+            </div>
+            <div class="container__img container__img--1"> <img src="./assets/img/PIÑUELA.svg" alt="" srcset=""></div>
+            <div class="container__ingredients"> 
+              <h3>Ingredientes </h3>
+              <ul> 
+                <li class="hover-item line-1" data-info="El huevo es un alimento básico en la dieta colombiana y juega un papel importante tanto en la gastronomía como en la economía del país. Aquí hay algunos aspectos relevantes sobre el huevo en Colombia">Huevo fresco</li>
+                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Panela</li>
+                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Piñuela</li>
+                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Maicena</li>
+              </ul>
+            </div>
+            <div class="container__paragraph container__paragraph--1"> 
+              <p>Ana Sofía Higuita Bedoya, una mujer nacida en el corazón de Santa Fe de Antioquia en 1936, creció rodeada de las tradiciones y sabores que sus ancestros le dejaron. Desde pequeña, observaba a su madre en la cocina, donde los ingredientes autóctonos eran los protagonistas de cada plato. Entre ellos, la piñuela, una fruta peculiar y ácida que crecía en su pueblo, siempre llamó su atención. </p>
+              <p>Un día, mientras Ana Sofía experimentaba con recetas tradicionales, recordó la vieja costumbre de hacer coladas espesas en las tardes de conversación familiar. Decidió innovar  y combinar la piñuela con la dulzura de la panela ya que la necesidad de alimentar a toda su familia, una numerosa era tal que requería algo que diera abasto. Lo que surgió de esa cocina fue una colada que no solo tenía el dulzor de la panela, sino también la acidez vibrante de la piñuela y la textura suave que la maicena ofrecía.</p>
+            </div>
+          </div>
+          <div class="page__number">6</div>
+        </div>
+      </div>
+      <div class="page book__page" style="--page-index: 5;">
+        <div class="page__half page__half--front">
+          <div class="container">
+            <div class="container__img container__img--2"><img src="./assets/img/COLADA DE PIÑUELA.jpg" alt="" srcset=""></div>
+            <div class="container__paragraph container__paragraph--2">
+              <p>La receta rápidamente ganó fama entre los vecinos, quienes la apodaron "la colada de la abuela Sofía". Era perfecta para los días frescos, y su sabor era un reflejo de la riqueza y diversidad de los ingredientes locales. Ana Sofía, ya entrada en años, siempre sonreía con orgullo cada vez que alguien le pedía el secreto de su creación a lo cual respondía que no había ningún secreto solo era la pasión y la creatividad y la recursividad las cuales dieron origen al plato. </p>
+            </div>
+            <div class="container__audio"> 
+              <div class="container__audio__text">
+                <h2>Escucha la receta que tenemos para ti</h2>
+              </div>
+              <button class="audio-button" id="audioButton">
+                <svg class="audio-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+              </button>
+              <audio id="myAudio" src="./assets/audio/COLADA PIÑUELA.mP"></audio>
+            </div>
+            <div class="container__pasos">
+              <button class="open-popup-btn" data-popup="popup3" onclick="lol()">Abrir Receta</button>
+
+              <div id="popup3" class="popup-overlay">
+                  <div class="popup-content">
+                      <button class="close-popup-btn">&times;</button>
+                      <div class="container__paso">
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO  P/Paso1.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 1</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="./assets/PASO A PASO  P/Paso2.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 2</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO  P/Paso3.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 3</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="./assets/PASO A PASO  P/Paso4.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 4</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO  P/Paso5.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 5</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="./assets/PASO A PASO  P/Paso6.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 6</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--odd">
+                          <img src="./assets/PASO A PASO  P/Paso7.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 7</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                          </div>
+                        </div>
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="./assets/PASO A PASO  P/Paso7.jpg" alt="lol">
+                          <div class="container__paso__text">
+                            <h2>Paso 7</h2>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="page__number">7</div>
         </div>
         <div class="page__half page__half--back">
           <div class="container"> 
@@ -192,7 +445,7 @@
           <div class="page__number">6</div>
         </div>
       </div>
-      <div class="page book__page book__cover book__cover--back" style="--page-index: 12;">
+      <div class="page book__page book__cover book__cover--back" style="--page-index: 6;">
         <div class="page__half page__half--front"></div>
         <div class="page__half page__half--back"></div>
         <div class="book__insert"><img class="gsap-logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/logo-man.svg"></div>

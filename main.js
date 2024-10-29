@@ -2,7 +2,6 @@ const audioButton = document.getElementById('audioButton');
 const audio = document.getElementById('myAudio');
 
 audioButton.addEventListener('click', () => {
-  alert('hola');
   if (audio.paused) {
     audio.play();
   } else {
@@ -11,26 +10,31 @@ audioButton.addEventListener('click', () => {
   }
 });
 
-const openPopupBtn = document.getElementById('openPopup');
-const closePopupBtn = document.getElementById('closePopup');
-const popupOverlay = document.getElementById('popupOverlay');
+const openPopupBtns = document.querySelectorAll('.open-popup-btn');
+const closePopupBtns = document.querySelectorAll('.close-popup-btn');
+const popupOverlays = document.querySelectorAll('.popup-overlay');
 
-function lol() {
-  popupOverlay.classList.add('active');
-}
-
-openPopupBtn.addEventListener('click', () => {
-    popupOverlay.classList.add('active');
+openPopupBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const popupId = btn.getAttribute('data-popup');
+        const popup = document.getElementById(popupId);
+        popup.classList.add('active');
+    });
 });
 
-closePopupBtn.addEventListener('click', () => {
-    popupOverlay.classList.remove('active');
+closePopupBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const popup = btn.closest('.popup-overlay');
+        popup.classList.remove('active');
+    });
 });
 
-popupOverlay.addEventListener('click', (e) => {
-    if (e.target === popupOverlay) {
-        popupOverlay.classList.remove('active');
-    }
+popupOverlays.forEach(overlay => {
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.classList.remove('active');
+        }
+    });
 });
 // BOOK ANIMATION
 
