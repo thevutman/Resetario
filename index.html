@@ -49,6 +49,7 @@
               <h3>Platos fuertes</h3>
               <div class="mini-slider">
                 <div class="mini-slider-container">
+                  <div class="mini-slide"><img src="./assets/img/FRIJOLES.svg" alt=""></div>
                   <div class="mini-slide">PROXIMAMENTE MAS PLATOS...</div>
                 </div>
                 <div class="mini-slider-nav">
@@ -62,6 +63,7 @@
                 <h3>Postres</h3>
                 <div class="mini-slider">
                   <div class="mini-slider-container">
+                    <div class="mini-slide"><img src="./assets/img/PIÑUELA.svg" alt=""></div>
                     <div class="mini-slide">PROXIMAMENTE MAS PLATOS...</div>
                   </div>
                   <div class="mini-slider-nav">
@@ -85,13 +87,9 @@
               <h3>Ingredientes </h3>
               <ul> 
                 <li class="hover-item line-1" data-info="El huevo es un alimento básico en la dieta colombiana y juega un papel importante tanto en la gastronomía como en la economía del país. Aquí hay algunos aspectos relevantes sobre el huevo en Colombia">Huevo fresco</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Bienmesabe</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Cebolla larga</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Tomate</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Perejil</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Ajo</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Pimiento</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Canela</li>
+                <li class="hover-item line-1" data-info="Este árbol se produce en clima de 27 a 28 grados; es de mucha vida; crece de 8 a 10 metros, da dos cosechas en año en abundancia. La fruta es rosada y cuando está en sazón se abre en 3 cascos y presenta la semilla en cada uno, la cual es azabache.">Bienmesabe</li>
+                <li class="hover-item line-1" data-info="La cebolla larga, conocida también como cebolla de rama o cebolla japonesa (Allium fistulosum), es un cultivo importante en Colombia, especialmente en regiones como Boyacá y Antioquia. Su cultivo es significativo debido a su demanda en la gastronomía local y su adaptabilidad a diferentes climas y suelos. En Santa Fe de Antioquia, este tipo de cebolla se cultiva principalmente en áreas con suelos bien drenados y se beneficia de un clima templado, lo que favorece su crecimiento">Cebolla larga</li>
+                <li class="hover-item line-1" data-info="">Tomate</li>
               </ul>
             </div>
             <div class="container__paragraph container__paragraph--1"> 
@@ -113,13 +111,13 @@
               <div class="container__audio__text">
                 <h2>Escucha la receta que tenemos para ti</h2>
               </div>
-              <button class="audio-button" id="audioButton">
+              <button class="audio-button" id="audioButton" onclick="audio1()">
                 <svg class="audio-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                   <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
                 </svg>
               </button>
-              <audio id="myAudio" src="./assets/audio/audio2.mp3"></audio>
+              <audio id="audio1" src="./assets/audio/audio2.mp3"></audio>
             </div>
             <div class="container__pasos">
               <button class="open-popup-btn" data-popup="popup1" onclick="lol()">Abrir Receta</button>
@@ -132,62 +130,62 @@
                           <img src="./assets/PASO A PASO/Paso1.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 1</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Pele el bienmesabe, asegurándose de retirar la fruta negra y la membrana.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO/Paso2.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 2</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Coloque el bienmesabe en una sartén y caliéntelo ligeramente para sellar los sabores.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--odd">
                           <img src="./assets/PASO A PASO/Paso3.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 3</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Corte finamente la cebolla larga y el tomate, que se usarán para preparar un hogao.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO/Paso4.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 4</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>En una sartén, sofría la cebolla y el tomate hasta que estén bien cocidos y los sabores se integren.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--odd">
                           <img src="./assets/PASO A PASO/Paso5.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 5</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Incorpore el bienmesabe sellado a la mezcla de hogao y revuelva bien para integrar los sabores.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO/Paso6.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 6</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Rompa un huevo sobre la mezcla y revuélvalo hasta que esté completamente cocido.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--odd">
                           <img src="./assets/PASO A PASO/Paso7.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 7</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Deje que la mezcla se cocine unos minutos más, asegurándose de que todo esté bien integrado.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO/Paso8.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 8</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Sirva la preparación caliente y disfrute del plato.</p>
                           </div>
                         </div>
-                        <div class="container__paso__descripcion container__paso__descripcion--odd">
-                          <img src="./assets/PASO A PASO/Paso8.jpg" alt="lol">
+                        <div class="container__paso__descripcion container__paso__descripcion--even">
+                          <img src="" alt="lol">
                           <div class="container__paso__text">
-                            <h2>Paso 8</h2>
+                            <h2>. <br>. <br>.</h2>
                           </div>
                         </div>
                       </div>
@@ -206,14 +204,14 @@
             <div class="container__ingredients"> 
               <h3>Ingredientes </h3>
               <ul> 
-                <li class="hover-item line-1" data-info="El huevo es un alimento básico en la dieta colombiana y juega un papel importante tanto en la gastronomía como en la economía del país. Aquí hay algunos aspectos relevantes sobre el huevo en Colombia">Huevo fresco</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Bienmesabe</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Cebolla larga</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Tomate</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Perejil</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Ajo</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Pimiento</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Canela</li>
+                <li class="hover-item line-1" data-info="El cultivo de plátano en Colombia es clave tanto para la seguridad alimentaria como para la economía agrícola del país. Se estima que alrededor de 500,000 hectáreas están dedicadas a este cultivo, siendo los principales departamentos productores Antioquia, Arauca, Quindío, Córdoba y Valle del Cauca. Aunque el plátano es mayormente destinado al consumo interno, Colombia también exporta a mercados como Estados Unidos y Europa, con un crecimiento notable en las exportaciones en los últimos años">Plátano</li>
+                <li class="hover-item line-1" data-info="">Masa de Maiz</li>
+                <li class="hover-item line-1" data-info="">Frijoles</li>
+                <li class="hover-item line-1" data-info="En Colombia, la producción de sal proviene principalmente de dos fuentes: salinas costeras y depósitos subterráneos. Los principales centros de producción de sal en el país son:">Sal</li>
+                <li class="hover-item line-1" data-info="El cultivo de ajo en Colombia ha ganado importancia debido a sus múltiples usos en la gastronomía y sus propiedades medicinales. El ajo se adapta bien a los climas fríos y se cultiva en altitudes entre los 1,800 y los 3,200 metros sobre el nivel del mar. Las principales regiones productoras son Cundinamarca, Boyacá, y Nariño, donde el clima fresco y seco, junto con los suelos ricos en materia orgánica, permiten el crecimiento óptimo del ajo. La época de siembra en estas regiones se da entre los meses de marzo y abril, y su cultivo, que no requiere grandes cantidades de agua, ha demostrado ser una excelente opción económica para los agricultores">Ajo</li>
+                <li class="hover-item line-1" data-info="El cultivo de cebolla en Colombia es una actividad de gran importancia tanto económica como gastronómica. En el país se cultivan diversas variedades, como la cebolla roja, blanca y amarilla. Estas se adaptan a distintos climas y suelos, lo que permite su producción en varias regiones del país, como la región Andina, Caribe, Pacífica y Orinoquía.">Cebolla</li>
+                <li class="hover-item line-1" data-info="La manteca de cerdo proviene de la grasa del cerdo, que se extrae mediante un proceso conocido como rendimiento o derretido. Este proceso consiste en calentar lentamente la grasa del cerdo para que se derrita, separando las partes sólidas (que se denominan chicharrones) de la grasa líquida, que luego se enfría y se solidifica, convirtiéndose en manteca.">Manteca de cerdo</li>
+                <li class="hover-item line-1" data-info="">Comino</li>
               </ul>
             </div>
             <div class="container__paragraph container__paragraph--1"> 
@@ -236,13 +234,13 @@
               <div class="container__audio__text">
                 <h2>Escucha la receta que tenemos para ti</h2>
               </div>
-              <button class="audio-button" id="audioButton">
+              <button class="audio-button" id="audioButton" onclick="audio2()">
                 <svg class="audio-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                   <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
                 </svg>
               </button>
-              <audio id="myAudio" src="./assets/audio/FRIJOLES MICO.mp3"></audio>
+              <audio id="audio2" src="./assets/audio/FRIJOLES MICO.mp3"></audio>
             </div>
             <div class="container__pasos">
               <button class="open-popup-btn" data-popup="popup2" onclick="lol()">Abrir Receta</button>
@@ -255,69 +253,69 @@
                           <img src="./assets/PASO A PASO FM/Paso1.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 1</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Coloque los frijoles en remojo desde el día anterior para ablandarlos.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO FM/Paso2.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 2</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Al día siguiente, ponga los frijoles a cocinar en agua a presión hasta que estén blandos.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--odd">
                           <img src="./assets/PASO A PASO FM/Paso3.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 3</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Pique el plátano verde en trozos pequeños mientras los frijoles se cocinan.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO FM/Paso4.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 4</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Una vez que los frijoles estén blandos, agregue el plátano verde picado y sazone con sal al gusto. Deje que la mezcla continúe cocinándose para que los sabores se integren.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--odd">
                           <img src="./assets/PASO A PASO FM/Paso5.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 5</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>En un recipiente, prepare la masa de maíz. Agregue ajo y cebolla finamente picados, comino, y una cucharada de manteca de cerdo.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO FM/Paso6.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 6</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Con la masa de maíz ya condimentada, forme pequeñas bolitas del tamaño de una nuez.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--odd">
                           <img src="./assets/PASO A PASO FM/Paso7.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 7</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Añada las bolas de masa a la olla de los frijoles con plátano y deje que se cocinen junto con el resto de la preparación.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO FM/Paso8.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 8</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Cocine hasta que las bolas de mico estén completamente cocidas y los sabores se hayan mezclado.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--odd">
                           <img src="./assets/PASO A PASO FM/Paso9.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 9</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Sirva los frijoles con plátano y las bolas de mico calientes, y disfrute.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
-                          <img src="./assets/PASO A PASO FM/Paso9.jpg" alt="lol">
+                          <img src="" alt="lol">
                           <div class="container__paso__text">
-                            <h2>Paso 9</h2>
+                            <h2>. <br>. <br>.</h2>
                           </div>
                         </div>
                       </div>
@@ -336,10 +334,9 @@
             <div class="container__ingredients"> 
               <h3>Ingredientes </h3>
               <ul> 
-                <li class="hover-item line-1" data-info="El huevo es un alimento básico en la dieta colombiana y juega un papel importante tanto en la gastronomía como en la economía del país. Aquí hay algunos aspectos relevantes sobre el huevo en Colombia">Huevo fresco</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Panela</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Piñuela</li>
-                <li class="hover-item line-1" data-info="Más información sobre el Item 1. Este es un ejemplo de contenido extendido.">Maicena</li>
+                <li class="hover-item line-1" data-info="">Panela</li>
+                <li class="hover-item line-1" data-info="La piñuela (Bromelia Karatas L.) se cultiva principalmente en el departamento del Cauca, específicamente en los municipios de Mercaderes y Patía. Estas zonas presentan las condiciones climáticas adecuadas para su crecimiento, con temperaturas anuales superiores a 24 ºC y un promedio de lluvias entre 500 y 1.000 milímetros. Además de su uso como cerca viva y muro de contención para evitar la erosión del suelo, sus frutos son apreciados por su sabor dulce, similar al de la piña, y por sus propiedades medicinales y organolépticas, utilizándose en la preparación de jugos, dulces y como molde para la producción de queso">Piñuela</li>
+                <li class="hover-item line-1" data-info="El departamento del Meta es el principal productor de maíz en Colombia, especialmente de maíz transgénico. En 2023, se sembraron 61.338 hectáreas en el Meta, representando una porción significativa de la producción nacional. Este maíz genéticamente modificado ha ganado popularidad debido a su resistencia a plagas y malezas, lo que permite mejorar los rendimientos y reducir los costos de producción​.">Maicena</li>
               </ul>
             </div>
             <div class="container__paragraph container__paragraph--1"> 
@@ -361,13 +358,13 @@
               <div class="container__audio__text">
                 <h2>Escucha la receta que tenemos para ti</h2>
               </div>
-              <button class="audio-button" id="audioButton">
+              <button class="audio-button" id="audioButton" onclick="audio3()">
                 <svg class="audio-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                   <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
                 </svg>
               </button>
-              <audio id="myAudio" src="./assets/audio/COLADA PIÑUELA.mP"></audio>
+              <audio id="audio3" src="./assets/audio/COLADA PIÑUELA.mp3"></audio>
             </div>
             <div class="container__pasos">
               <button class="open-popup-btn" data-popup="popup3" onclick="lol()">Abrir Receta</button>
@@ -380,55 +377,55 @@
                           <img src="./assets/PASO A PASO  P/Paso1.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 1</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Coloque una cantidad de agua a hervir junto con panela. Si prefiere utilizar azúcar en lugar de panela, el resultado será un líquido de color más claro, aunque la panela ofrece un sabor más auténtico y profundo.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO  P/Paso2.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 2</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p> Pele la piñuela, córtela en trozos y procésela en la licuadora hasta obtener una mezcla homogénea.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--odd">
                           <img src="./assets/PASO A PASO  P/Paso3.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 3</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Cuele la mezcla de piñuela para separar el jugo de los restos sólidos.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO  P/Paso4.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 4</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Cuando el agua con la panela alcance el punto de ebullición, agregue el jugo de piñuela previamente colado.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--odd">
                           <img src="./assets/PASO A PASO  P/Paso5.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 5</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Vierta maicena de acuerdo a su preferencia para obtener la consistencia deseada. La maicena dará una textura espesa, similar a un manjar.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
                           <img src="./assets/PASO A PASO  P/Paso6.jpg" alt="lol">
                           <div class="container__paso__text">
                             <h2>Paso 6</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                            <p>Remueva la mezcla hasta que alcance la consistencia deseada y asegúrese de que esté bien integrada. Sirva caliente o deje enfriar según su gusto.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--odd">
                           <img src="./assets/PASO A PASO  P/Paso7.jpg" alt="lol">
                           <div class="container__paso__text">
-                            <h2>Paso 7</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, beatae nobis. Aliquid molestias sit, necessitatibus porro dolores adipisci nam quos neque culpa dolore possimus corporis?</p>
+                           <h2>Paso 7</h2>
+                           <p>Está lista para servir y disfrutar.</p>
                           </div>
                         </div>
                         <div class="container__paso__descripcion container__paso__descripcion--even">
-                          <img src="./assets/PASO A PASO  P/Paso7.jpg" alt="lol">
+                          <img src="" alt="lol">
                           <div class="container__paso__text">
-                            <h2>Paso 7</h2>
+                            <h2>. <br>. <br>.</h2>
                           </div>
                         </div>
                       </div>

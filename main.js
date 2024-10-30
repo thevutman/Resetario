@@ -1,14 +1,31 @@
-const audioButton = document.getElementById('audioButton');
-const audio = document.getElementById('myAudio');
-
-audioButton.addEventListener('click', () => {
+function audio1() {
+  const audio = document.getElementById('audio1');
   if (audio.paused) {
     audio.play();
   } else {
     audio.pause();
     audio.currentTime = 0;
   }
-});
+}
+
+function audio2() {
+  const audio = document.getElementById('audio2');
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+}
+function audio3() {
+  const audio = document.getElementById('audio3');
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+}
 
 const openPopupBtns = document.querySelectorAll('.open-popup-btn');
 const closePopupBtns = document.querySelectorAll('.close-popup-btn');
@@ -86,48 +103,6 @@ const {
       },
     })
   })
-
-
-// SLIDER ANIMATION
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-const dots = document.querySelectorAll('.dot');
-let currentIndex = 0;
-
-function updateSlider() {
-  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-  dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentIndex);
-  });
-}
-
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateSlider();
-}
-
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateSlider();
-}
-
-nextButton.addEventListener('click', nextSlide);
-prevButton.addEventListener('click', prevSlide);
-
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    currentIndex = index;
-    updateSlider();
-  });
-});
-
-// Opcional: Cambio automático de diapositivas
-// setInterval(nextSlide, 5000);
-
-// Inicializar el slider principal
-updateSlider();
 
 // Nuevo código para los mini-sliders
 const miniSliders = document.querySelectorAll('.mini-slider');

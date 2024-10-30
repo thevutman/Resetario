@@ -276,6 +276,7 @@ img {
   flex-direction: column;
   gap: 4px;
   height: 100%;
+  position: relative;
 
   background-color: #CBEFB6;
   border-radius: 16px;
@@ -514,7 +515,7 @@ img {
   padding: 0;
 }
 .hover-item {
-  position: relative;
+  /* position: relative; */
   cursor: pointer;
   width: -webkit-fit-content;
   width: -moz-fit-content;
